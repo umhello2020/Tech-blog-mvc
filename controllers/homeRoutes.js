@@ -6,6 +6,7 @@ router.get('/', async (req, res) => {
         const postData = await Blog_Post.findAll({
             include: [ User ],
         });
+        console.log(postData)
         res.render('homepage', {
             postData
         })
