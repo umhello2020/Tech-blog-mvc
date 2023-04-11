@@ -25,7 +25,7 @@ Blog_Post.init(
     },
     {
         sequelize,
-        modelName: 'blogPost',
+        modelName: 'blog_post',
     }
 );
 
