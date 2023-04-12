@@ -3,12 +3,12 @@ const { User, Blog_Post } = require('../models');
 
 router.get('/', async (req, res) => {
     try {
-        const postData = await Blog_Post.findAll({
+        const blog_posts = await Blog_Post.findAll({
             include: [ User ],
         });
-        console.log(postData)
+        console.log(blog_posts)
         res.render('homepage', {
-            postData
+            blog_posts
         })
     } catch (err) {
         res.status(400).json(err);
@@ -26,6 +26,10 @@ router.get('/login', (req, res) => {
 
 router.get('/signup', (req, res) => {
     res.render('signup');
+})
+
+router.get('/profile', (req, res) => {
+    res.render('profile');
 })
 
 
