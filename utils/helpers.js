@@ -1,23 +1,23 @@
-module.exports = {
-    format_date: (date) => {
-      // Format date as MM/DD/YYYY
-      return date.toLocaleDateString();
-    },
-    format_amount: (amount) => {
-      // format large numbers with commas
-      return parseInt(amount).toLocaleString();
-    },
-    get_emoji: () => {
-      const randomNum = Math.random();
-  
-      // Return a random emoji
-      if (randomNum > 0.7) {
-        return `<span for="img" aria-label="lightbulb">💡</span>`;
-      } else if (randomNum > 0.4) {
-        return `<span for="img" aria-label="laptop">💻</span>`;
-      } else {
-        return `<span for="img" aria-label="gear">⚙️</span>`;
-      }
-    },
-  };
+// helper.js
+
+// Format date as MM/DD/YYYY
+const format_date = (date) => {
+  const d = new Date(date);
+  let month = '' + (d.getMonth() + 1);
+  let day = '' + d.getDate();
+  const year = d.getFullYear();
+
+  if (month.length < 2) {
+    month = '0' + month;
+  }
+
+  if (day.length < 2) {
+    day = '0' + day;
+  }
+
+  return [month, day, year].join('/');
+};
+
+module.exports = { format_date };
+
   
