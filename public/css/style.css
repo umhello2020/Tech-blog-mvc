@@ -1,0 +1,44 @@
+/* Blog Post Title */
+.post-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Blog Post Content */
+  .post-content {
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+  
+  /* Blog Post Metadata */
+  .post-metadata {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 1rem;
+  }
+  
+  /* Blog Post Author */
+  .post-author {
+    font-size: 0.8rem;
+    color: #555;
+  }
+  
+  /* Blog Post Comments */
+  .comment {
+    margin-bottom: 1rem;
+  }
+  
+  .comment-author {
+    font-weight: bold;
+  }
+  
+  .comment-text {
+    margin-top: 0.5rem;
+  }
+  
+  .comment-metadata {
+    font-size: 0.8rem;
+    color: #888;
+  }
+  
