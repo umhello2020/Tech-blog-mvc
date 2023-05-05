@@ -5,8 +5,8 @@ const BlogPost = require('./blog_post');
 
 class Comment extends Model {
      // format the timestamp on the post
-  formattedDateCreated() {
-    return format_date(this.date_created);
+  formattedCreatedAt() {
+    return format_date(this.created_at);
   }
 }
 
@@ -16,7 +16,7 @@ Comment.init(
             type: DataTypes.TEXT,
             allowNull: false,
         },
-        date_created: {
+        created_at: {
             type: DataTypes.DATE,
             allowNull: false,
             defaultValue: DataTypes.NOW,
