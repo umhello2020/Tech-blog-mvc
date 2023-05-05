@@ -3,7 +3,7 @@ const { User, Blog_Post, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Get all blog posts and their associated users
-router.get('/', async (req, res) => {
+router.get('/homepage', async (req, res) => {
   try {
     const blog_posts = await Blog_Post.findAll({
       include: [
