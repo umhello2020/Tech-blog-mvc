@@ -21,7 +21,7 @@ const loginFormHandler = async (event) => {
 
       // If successful, redirect the browser to the profile page
     
-      document.location.replace('/profile');
+      document.location.replace('/dashboard');
     } catch (error) {
       console.error(error);
       alert('Failed to log in');

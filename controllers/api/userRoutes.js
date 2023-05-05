@@ -59,18 +59,18 @@ router.post('/logout', (req, res) => {
   }
 });
 
-router.get('/dashboard', async (req, res) => {
-  try {
-    const userData = await User.findByPk(req.session.user_id);
-    const user = userData.get({ plain: true });
+// router.get('/dashboard', async (req, res) => {
+//   try {
+//     const userData = await User.findByPk(req.session.user_id);
+//     const user = userData.get({ plain: true });
 
-    res.render('dashboard', {
-      ...user,
-      logged_in: true
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     res.render('dashboard', {
+//       ...user,
+//       logged_in: true
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;

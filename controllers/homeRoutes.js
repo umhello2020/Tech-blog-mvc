@@ -48,7 +48,7 @@ router.get('/signup', (req, res) => {
 });
 
 // Render profile page
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
   try {
     const user = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
