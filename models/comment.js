@@ -3,7 +3,12 @@ const sequelize = require('../config/connection');
 const User = require('./user');
 const BlogPost = require('./blog_post');
 
-class Comment extends Model {}
+class Comment extends Model {
+     // format the timestamp on the post
+  formattedDateCreated() {
+    return format_date(this.date_created);
+  }
+}
 
 Comment.init(
     {
@@ -11,6 +16,11 @@ Comment.init(
             type: DataTypes.TEXT,
             allowNull: false,
         },
+        date_created: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW,
+          },
         user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -30,11 +40,12 @@ Comment.init(
     },
     {
         sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
         modelName: 'comment',
     }
 );
-
-Comment.belongsTo(User, { foreignKey: 'user_id' });
 
 
 module.exports = Comment;

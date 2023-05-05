@@ -5,8 +5,8 @@ const { format_date } = require('../utils/helpers');
 
 class Blog_Post extends Model {
   // format the timestamp on the post
-  formattedCreatedAt() {
-    return format_date(this.createdAt);
+  formattedDateCreated() {
+    return format_date(this.date_created);
   }
 }
 
@@ -20,6 +20,11 @@ Blog_Post.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -31,6 +36,9 @@ Blog_Post.init(
   },
   {
     sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
     modelName: 'blog_post',
   }
 );

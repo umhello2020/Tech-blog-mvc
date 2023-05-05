@@ -1,34 +1,26 @@
 [
-    {
-      "blog_post_id": 1,
-      "comment": "Great app! I just got notified about a concert nearby and it was awesome.",
-      "user": {
-        "username": "sal@hotmail.com"
-      },
-      "date": "2023-05-02T14:30:00.000Z"
-    },
-    {
-      "blog_post_id": 2,
-      "comment": "This is so helpful for keeping up with my technical skills! Thanks for making this app.",
-      "user": {
-        "username": "lernantino@gmail.com"
-      },
-      "date": "2023-05-03T10:45:00.000Z"
-    },
-    {
-      "blog_post_id": 3,
-      "comment": "This game is so much fun! I love the challenging levels.",
-      "user": {
-        "username": "amiko2k20@aol.com"
-      },
-      "date": "2023-05-03T16:15:00.000Z"
-    },
-    {
-      "blog_post_id": 2,
-      "comment": "I'm having trouble with question 7. Any tips?",
-      "user": {
-        "username": "amiko2k20@aol.com"
-      },
-      "date": "2023-05-04T08:20:00.000Z"
-    }
+  {
+  "blog_post_id": 1,
+  "content": "Great app! I just got notified about a concert nearby and it was awesome.",
+  "user_id": 1,
+  "date": "2023-05-02T14:30:00.000Z"
+  },
+  {
+  "blog_post_id": 2,
+  "content": "This is so helpful for keeping up with my technical skills! Thanks for making this app.",
+  "user_id": 2,
+  "date": "2023-05-03T10:45:00.000Z"
+  },
+  {
+  "blog_post_id": 3,
+  "content": "This game is so much fun! I love the challenging levels.",
+  "user_id": 3,
+  "date": "2023-05-03T16:15:00.000Z"
+  },
+  {
+  "blog_post_id": 2,
+  "content": "I'm having trouble with question 7. Any tips?",
+  "user_id": 3,
+  "date": "2023-05-04T08:20:00.000Z"
+  }
   ]
