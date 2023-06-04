@@ -14,7 +14,7 @@
       <p>By {{user.username}}</p>
     {{/if}}
     <p>{{content}}</p>
-    <p>{{date_created}}</p>
+    <p>{{created_at}}</p>
   </div>
 
   {{#each comments}}
@@ -25,7 +25,7 @@
         <p>Anonymous commented on {{../title}}:</p>
       {{/if}}
       <p>{{content}}</p>
-      <p>{{date_created}}</p>
+      <p>{{created_at}}</p>
     </div>
   {{/each}}
 

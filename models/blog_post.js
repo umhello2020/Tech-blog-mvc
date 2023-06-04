@@ -6,7 +6,7 @@ const { format_date } = require('../utils/helpers');
 class Blog_Post extends Model {
   // format the timestamp on the post
   formattedDateCreated() {
-    return format_date(this.date_created);
+    return format_date(this.created_at);
   }
 }
 
@@ -20,7 +20,7 @@ Blog_Post.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    date_created: {
+    created_at: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,

@@ -10,16 +10,16 @@ const routes = require('./controllers');
 const sequelize = require('./config/connection');
 require('dotenv').config();
 
-// Update User model with formattedCreatedAt helper
+// Update User model with formattedcreated_at helper
 const User = require('./models/user');
-User.prototype.formattedCreatedAt = function () {
-  return helpers.format_date(this.createdAt);
+User.prototype.formattedcreated_at = function () {
+  return helpers.format_date(this.created_at);
 };
 
-// Update Comment model with formattedCreatedAt helper
+// Update Comment model with formattedcreated_at helper
 const Comment = require('./models/comment');
-Comment.prototype.formattedCreatedAt = function () {
-  return helpers.format_date(this.createdAt);
+Comment.prototype.formattedcreated_at = function () {
+  return helpers.format_date(this.created_at);
 };
 
 const app = express();
